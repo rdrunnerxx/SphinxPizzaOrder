@@ -39,7 +39,7 @@ class Order:
     # Ensure multiple pizza objects within a given order result in an additively larger cost        
     def input_pizza(self, crust, sauce, cheese, toppings):
         """
-         Add a Pizza object to the Order
+         Add a Pizza object to the Order list of pizzas[]
         
         :param: crust - The crust of the pizza. (a string)
         :param: sauce - The sauce of the pizza. (string lis)

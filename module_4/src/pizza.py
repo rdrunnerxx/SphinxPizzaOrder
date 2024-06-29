@@ -12,9 +12,13 @@ Cheese  = [ ("None", 0),        ("Mozzarella", 0)]                          # wi
 class Pizza:
     """
     Our Pizza object has several properties:
+    
     Crust: Thin,  Thick,  Gluten_Free
+    
     Sauce: Marinara, Pesto,  Liv_Sauce
+    
     Toppings: Pineapple, Pepperoni, Mushrooms
+    
     Cheese:  Cheese option can be Mozzarella or no cheese at all
     
     """
@@ -43,6 +47,19 @@ class Pizza:
     # Initialize the pizza object and attach to the order
     # Update the cost and returns cost
     def create_pizza(self, crust, sauce, cheese, toppings)->float:
+        """ This method creates the pizza object then returns the cost
+        of it by calling the cost() method
+        
+        
+        :param: crust - The crust of the pizza. (a string)
+        :param: sauce - The sauce of the pizza. (string lis)
+        :param: cheese - The cheese of the pizza. (a string)
+        :param: toppings - The toppings of the pizza. (string list)
+        
+        :return: float
+        
+        """
+
         self.crustprice = 0
         for i in range(len(Crust)):                
             if (crust == Crust[i][0]):
