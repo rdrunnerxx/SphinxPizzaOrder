@@ -2,8 +2,6 @@
 
 #Module Info: Module 4 - Pytest and Sphinx, due 06/30/2024 at 11:59pm 
 
-
-
 # Our pizza inventory items
 Crust   = [ ("Thin", 5),        ("Thick", 6),       ("Gluten_Free", 8)]
 Sauce   = [ ("Marinara", 2),    ("Pesto", 3),       ("Liv_Sauce", 5)]
@@ -12,7 +10,14 @@ Cheese  = [ ("None", 0),        ("Mozzarella", 0)]                          # wi
 
 #Pizza objects and associated costs
 class Pizza:
+    """
+    Our Pizza object has several properties:
+    Crust: Thin,  Thick,  Gluten_Free
+    Sauce: Marinara, Pesto,  Liv_Sauce
+    Toppings: Pineapple, Pepperoni, Mushrooms
+    Cheese:  Cheese option can be Mozzarella or no cheese at all
     
+    """
     # Initialize a pizza, variables and cost
     def __init__(self, crust, sauce, cheese, toppings):                     # sauce and toppings are list 
         self.price = 0                                                      # initizalize price to 0
@@ -21,6 +26,14 @@ class Pizza:
     #==================================    
     #Determine cost of the pizza
     def cost(self)->float:
+        """
+        This method returns cost of pizza
+        :param: None
+        
+        :return: float
+        
+        """
+        
         self.price  = self.crustprice + self.sauceprice + self.toppingsprice            
         return self.price
     
@@ -64,6 +77,13 @@ class Pizza:
     #=================================
     # Print a pizza and cost
     def __str__(self):
+        """
+        return a string that contains information about the pizzas and the cost of it
+        
+        :return: string
+       
+        """
+        
         return(f"Crust: {self.crust}, Sauce: {self.sauce}, Cheese: {self.cheese}, Toppings: {self.toppings}, Cost: {self.price}")
     
              
@@ -87,5 +107,6 @@ class Pizza:
     
 
     
+
 
 

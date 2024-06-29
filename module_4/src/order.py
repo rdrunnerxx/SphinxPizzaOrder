@@ -16,6 +16,8 @@ class Order:
      An extensible pizza ordering class: A service class to allow other 
      developers to quickly build upon restaurant template and extend to new 
      menu items and processes.
+     
+     An order must contain at least one pizza.
     """
     
     #assign a unique integer order id to each order
@@ -37,14 +39,14 @@ class Order:
     # Ensure multiple pizza objects within a given order result in an additively larger cost        
     def input_pizza(self, crust, sauce, cheese, toppings):
         """
-        Add a Pizza object to the Order
+         Add a Pizza object to the Order
         
-        :param: crust - The crust of the pizza.
-        :param: sauce - The sauce of the pizza.
-        :param: cheese - The cheese of the pizza.
-        :param: toppings - The toppings of the pizza.
+        :param: crust - The crust of the pizza. (a string)
+        :param: sauce - The sauce of the pizza. (string lis)
+        :param: cheese - The cheese of the pizza. (a string)
+        :param: toppings - The toppings of the pizza. (string list)
         
-        :return: None
+        :return: The pizza object that is created
         
         """
 
@@ -56,6 +58,12 @@ class Order:
     #=================================
     # Print a customer's complete order
     def __str__(self)->str:
+        """
+        return a string that contains information about all pizzas ordered
+        
+        :return: string
+       
+        """
         
         s = ""
         for piz in self.pizzas:            
