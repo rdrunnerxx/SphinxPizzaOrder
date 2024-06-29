@@ -20,6 +20,12 @@ class Order:
     
     #assign a unique integer order id to each order
     def __init__(self):
+
+        """
+        init method initializes pizza list of items to none
+        total cost is set to 0.00 
+        paid is set to false
+        """
         self.pizzas      = []
         self.total_cost  = 0.00                           # total cost of order (could be aggregate, multiple pizza orders)            
         self.paid        = False                          # false initially
@@ -30,6 +36,18 @@ class Order:
     # Update the cost            
     # Ensure multiple pizza objects within a given order result in an additively larger cost        
     def input_pizza(self, crust, sauce, cheese, toppings):
+        """
+        Add a Pizza object to the Order
+        
+        :param: crust - The crust of the pizza.
+        :param: sauce - The sauce of the pizza.
+        :param: cheese - The cheese of the pizza.
+        :param: toppings - The toppings of the pizza.
+        
+        :return: None
+        
+        """
+
         my_pizza = Pizza(crust, sauce, cheese, toppings)        
         self.total_cost += my_pizza.price
         self.pizzas.append(my_pizza)
@@ -48,6 +66,13 @@ class Order:
     #=================================
     # Set Order as paid once payment has been collected
     def order_paid(self)->bool:
+        """
+        Set the order as paid
+        
+        :return: Bool
+       
+        """
+
         self.paid = True
         return self.paid
     
