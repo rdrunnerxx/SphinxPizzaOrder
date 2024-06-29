@@ -32,4 +32,4 @@ sphinx:
 #    - requirements: docs/requirements.txt
 python:
   install:
-  - requirements: module_4/Sphinx/requirements.txt
+  - requirements: module_4/docs/requirements.txt
