@@ -32,6 +32,7 @@ class Pizza:
     def cost(self)->float:
         """
         This method returns cost of pizza
+        
         :param: None
         
         :return: float
@@ -48,6 +49,7 @@ class Pizza:
     # Update the cost and returns cost
     def create_pizza(self, crust, sauce, cheese, toppings)->float:
         """ This method creates the pizza object then returns the cost
+        
         of it by calling the cost() method
         
         
@@ -95,7 +97,9 @@ class Pizza:
     # Print a pizza and cost
     def __str__(self):
         """
-        return a string that contains information about the pizzas and the cost of it
+        return a string that contains information about the pizzas and 
+        
+        the cost of it
         
         :return: string
        
