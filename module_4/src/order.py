@@ -12,7 +12,11 @@ from src.pizza import Pizza
     
 # Class to store information about a Orders
 class Order:
-
+    """
+     An extensible pizza ordering class: A service class to allow other 
+     developers to quickly build upon restaurant template and extend to new 
+     menu items and processes.
+    """
     
     #assign a unique integer order id to each order
     def __init__(self):
@@ -52,3 +56,4 @@ class Order:
    
         
         
+
